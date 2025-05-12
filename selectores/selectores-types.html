@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplos de Selectores CSS</title>
+    <link rel="stylesheet" href="tipos-selectores.css">
+</head>
+<body>
+    <h1 class="titulo">Ejemplos de Selectores CSS</h1>
+    
+    <div id="principal">
+        <!-- Ejemplo de selector de ID (#principal) -->
+        <h2>Guía de Selectores</h2>
+        <p class="destacado">Este documento muestra ejemplos de cada tipo de selector CSS.</p>
+        
+        <!-- Ejemplo para pseudo-elemento ::first-letter -->
+        <p>Cada tipo de selector tiene un propósito específico y utilidad en diferentes situaciones. 
+           Conocer todos los selectores te permite escribir CSS más eficiente y preciso.</p>
+        
+        <!-- Ejemplo para selector de clase (.nota) -->
+        <p class="nota">Utiliza los selectores adecuados para mantener tu CSS limpio y fácil de mantener.</p>
+    </div>
+    
+    <!-- Ejemplos para selectores de atributos -->
+    <section>
+        <h3>Enlaces y Atributos</h3>
+        
+        <!-- Ejemplos para selectores de atributos [href], [href^="https"] -->
+        <div>
+            <a href="https://www.ejemplo.com">Enlace HTTPS (verde)</a><br>
+            <a href="http://otroejemplo.com">Enlace HTTP (normal)</a><br>
+            <a>Enlace sin href (sin subrayado)</a>
+        </div>
+        
+        <!-- Ejemplo para selector [type="text"] -->
+        <div>
+            <input type="text" placeholder="Input tipo texto">
+            <input type="password" placeholder="Input tipo password">
+        </div>
+        
+        <!-- Ejemplo para selector [class*="btn"] -->
+        <div>
+            <button class="btn-primario">Botón Primario</button>
+            <button class="mi-btn-secundario">Botón Secundario</button>
+        </div>
+    </section>
+    
+    <!-- Ejemplos para combinadores -->
+    <nav>
+        <!-- Para nav > ul y nav ul -->
+        <ul>
+            <li>Elemento 1 (negrita por :first-child)</li>
+            <li class="menu-item">Elemento 2</li>
+            <li class="menu-item active">Elemento 3 (activo)</li>
+            <li class="menu-item">Elemento 4</li>
+            <!-- Anidado para demostrar la diferencia entre descendiente y hijo directo -->
+            <li>Submenú
+                <ul>
+                    <li>Subelemento 1</li>
+                    <li>Subelemento 2</li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    
+    <!-- Ejemplos para hermanos y hermanos adyacentes -->
+    <section>
+        <h3>Sección de Hermanos</h3>
+        <!-- El primer párrafo después de h3 tendrá negrita (h3 + p) -->
+        <p>Este párrafo está inmediatamente después del h3 (negrita e itálica).</p>
+        <!-- Todos los párrafos después de h3 tendrán itálica (h3 ~ p) -->
+        <p>Este párrafo también es hermano de h3 (solo itálica).</p>
+        <p>Este es otro párrafo hermano (solo itálica).</p>
+    </section>
+    
+    <!-- Ejemplo para pseudo-elementos ::before -->
+    <div>
+        <p class="icon">Item destacado</p>
+        <p class="icon">Otro item destacado</p>
+    </div>
+    
+    <!-- Ejemplo para selector [src$=".jpg"] -->
+    <div>
+        <img src="imagen.jpg" alt="Imagen JPG" width="100">
+        <img src="icono.png" alt="PNG sin borde" width="100">
+    </div>
+</body>
+</html>

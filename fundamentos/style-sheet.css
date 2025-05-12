@@ -1,0 +1,32 @@
+/* Estructura Basica del CSS */
+
+/* selector {
+    propiedad: valor;
+    otra-propiedad: otro-valor;
+  } */
+
+  p {
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    width: fit-content;
+    border: 1px solid black;
+    padding: 16px;
+    background-color: lightyellow;
+  }
+  h1 {
+    color: blue;
+    font-size: 28px;
+  }
+  h2 {
+    color: green;
+    font-size: 24px;
+    font-family: fantasy;
+  }
+  h3 {
+    color: purple;
+    font-size: 16px;
+    text-decoration: underline;
+  }
+
+  

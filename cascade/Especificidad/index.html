@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejemplo de selectores CSS</title>
+    <style>
+      /* Regla 1: Especificidad 1 */
+      p {
+        color: blue;
+        font-size: 16px;
+      }
+
+      /* Regla 2: Especificidad 1 */
+      .texto {
+        color: green;
+        line-height: 1.5;
+      }
+
+      /* Regla 3: Especificidad 2 */
+      p.destacado {
+        color: red; 
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Especificidad en CSS</h1>
+    <p>Este es un párrafo normal</p>
+    <p class="texto">Este párrafo tiene clase "texto"</p>
+    <p class="texto destacado">Este párrafo tiene dos clases</p>
+  </body>
+</html>

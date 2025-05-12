@@ -1,0 +1,26 @@
+<style>
+  body {
+    color: greenyellow;
+    font-family:'Courier New', Courier, monospace;
+    line-height: 1.6;
+  }
+
+  .contenedor {
+    color: blue;
+  }
+
+  .no-hereda {
+    color: initial; /* Vuelve al valor por defecto del navegador */
+    font-family: initial; /* Vuelve al valor por defecto del navegador */
+  }
+</style>
+
+<body>
+  <h1>Este título hereda font-family y line-height del body</h1>
+
+  <div class="contenedor">
+    <p>Este párrafo hereda el color azul del div .contenedor</p>
+
+    <p class="no-hereda">Este párrafo no hereda el color azul</p>
+  </div>
+</body>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplo de cascade CSS</title>
+  <style>
+    /* Estilos de Agente de Usuario */
+        body {
+        color: black; /* pierde vs estilos de Usuario */
+        }
+        
+        /* Estilos de Usuario */
+        body {
+        color: blue; /* pierde vs estilos de Autor */
+        }
+        
+        /* Estilos de Autor */
+        body {
+        color: red; /* purple aparece después y le gana */
+        color: purple !important; /* gana por ser importante */
+        color: yellow; /* aparece al final y ganaría, pero pierde por importancia */
+        }
+  </style>
+  <body>
+    <h2>Ejemplo de Cascade in CSS</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at massa odio. Pellentesque in rutrum tellus. Cras dolor turpis, convallis id orci at, scelerisque hendrerit leo. Phasellus vel augue felis. Curabitur facilisis finibus erat vitae ornare. Nullam viverra, augue sit amet ullamcorper aliquet, nunc ante iaculis nibh, vitae rutrum justo diam vel purus. Proin ultricies sagittis suscipit. </p>
+  </body>
+</html>

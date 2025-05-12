@@ -1,0 +1,164 @@
+/* 
+TIPOS DE SELECTORES: 
+
+# Tabla de Selectores CSS
+
+Nº | Tipo de Selector                     | Ejemplo           | Descripción |
+---|--------------------------------------|-------------------|-------------------------------------------------------------------- |
+1  | Universal (**)                       | `*`               | Selecciona todos los elementos del documento                        |
+2  | Tipo (**)                            | `h1`              | Selecciona todos los elementos `<h1>`                               |
+3  | Clase (**)                           | `.intro`          | Selecciona todos los elementos con el atributo class="intro"        |
+4  | ID (**)                              | `#main`           | Selecciona el elemento con el atributo id="main"                    |
+5  | Atributo (**)                        | `a[href]`         | Selecciona todos los elementos `<a>` con un atributo href           |
+6  | Atributo exacto                      | `[type="text"]`   | Selecciona elementos con atributo type="text" exactamente           |
+7  | Atributo contiene                    | `[class*="btn"]`  | Selecciona elementos cuya clase contiene "btn"                      |
+8  | Atributo comienza                    | `[href^="https"]` | Selecciona elementos con href que comienza con "https"              |
+9  | Atributo termina                     | `[src$=".jpg"]`   | Selecciona elementos con src que termina en ".jpg"                  |
+10 | Pseudo-clase (**)                    | `a:hover`         | Selecciona los elementos `<a>` cuando se pasa el cursor sobre ellos |
+11 | Pseudo-clase de posición             | `li:first-child`  | Selecciona el primer elemento `<li>` dentro de su contenedor        |
+12 | Pseudo-clase de negación             | `:not(.active)`   | Selecciona todos los elementos que no tienen la clase "active"      |
+13 | Pseudo-elemento(**)                  | `p::first-letter` | Selecciona la primera letra de cada elemento `<p>`                  |
+14 | Pseudo-elemento before/after         | `div::before`     | Crea un pseudo-elemento antes del contenido de cada `<div>`         |
+15 | Combinador de Descendiente (**)      | `nav ul`          | Selecciona todos los `<ul>` que son descendientes de `<nav>`        |
+16 | Combinador de Hijo (**)              | `nav > ul`        | Selecciona todos los `<ul>` que son hijos directos de `<nav>`       |
+17 | Combinador de Hermano (**)           | `h2 ~ p`          | Selecciona todos los `<p>` que son hermanos de `<h2>`               | 
+18 | Combinador de Hermano Adyacente (**) | `h2 + p`          | Selecciona todos los `<p>` inmediatamente después de un `<h2>`      |
+19 | Selectores compuestos (**)           | `h2.branded`      | Selecciona todos los `<h2>` que tengan la clase "branded"           |
+20 | Múltiples selectores                 | `h1, h2, .title`  | Selecciona todos los `<h1>`, `<h2>` y elementos con clase "title"   |
+
+*/
+
+/* 1. Selector Universal */
+* {
+  box-sizing: border-box;
+ /*  border: 1px solid #0056b3; */
+  /* Afecta a TODOS los elementos de la página */
+}
+
+/* 2. Selector de Tipo */
+h2 {
+  color: #0066cc;
+  /* Afecta a todos los elementos <h2> */
+}
+
+/* 3. Selector de Clase */
+.destacado {
+  font-weight: bold;
+  background-color: #fffde7;
+  padding: 10px;
+  /* Afecta a todos los elementos con class="destacado" */
+}
+
+/* 4. Selector de ID */
+#principal {
+  border: 2px solid #4caf50;
+  padding: 15px;
+  /* Afecta solo al elemento con id="principal" */
+}
+
+/* 5. Selector de Atributo (simple) */
+a[href] {
+  text-decoration: underline;
+  /* Afecta a todos los enlaces <a> que tengan un atributo href */
+}
+
+/* 6. Selector de Atributo (valor exacto) */
+input[type="text"] {
+  border: 1px solid #999;
+  padding: 8px;
+  /* Afecta a todos los <input> con type="text" */
+}
+
+/* 7. Selector de Atributo (contiene) */
+[class*="btn"] {
+  display: inline-block;
+  padding: 8px 20px;
+  cursor: pointer;
+  /* Afecta a elementos cuya clase contenga "btn" */
+}
+
+/* 8. Selector de Atributo (comienza con) */
+[href^="https"] {
+  color: green;
+  /* Afecta a elementos con href que comienza con "https" */
+}
+
+/* 9. Selector de Atributo (termina con) */
+[src$=".jpg"] {
+  border: 3px solid #ddd;
+  /* Afecta a elementos con src que termina en ".jpg" */
+}
+
+/* 10. Pseudo-clase */
+button:hover {
+  background-color: #0056b3;
+  /* Afecta a los botones cuando el cursor está sobre ellos */
+}
+
+/* 11. Pseudo-clase de posición */
+li:first-child {
+  font-weight: bold;
+  /* Afecta al primer elemento <li> dentro de su contenedor */
+}
+
+/* 12. Pseudo-clase de negación */
+.menu-item:not(.active) {
+  opacity: 0.7;
+  /* Afecta a elementos con clase "menu-item" que NO tienen la clase "active" */
+}
+
+/* 13. Pseudo-elemento first-letter */
+p::first-letter {
+  font-size: 150%;
+  font-weight: bold;
+  color: #e91e63;
+  /* Afecta a la primera letra de cada párrafo */
+}
+
+/* 14. Pseudo-elemento before */
+.icon::before {
+  content: "★ ";
+  color: gold;
+  /* Inserta contenido antes del elemento */
+}
+
+/* 15. Combinador de Descendiente */
+nav ul {
+  list-style-type: none;
+  padding-left: 0;
+  /* Afecta a cualquier <ul> dentro de <nav>, sin importar anidamiento */
+}
+
+/* 16. Combinador de Hijo */
+nav > ul {
+  display: flex;
+  /* Afecta SOLO a los <ul> que son hijos directos de <nav> */
+}
+
+/* 17. Combinador de Hermano */
+h3 ~ p {
+  font-style: italic;
+  /* Afecta a todos los <p> que son hermanos (después) de <h3> */
+}
+
+/* 18. Combinador de Hermano Adyacente */
+h3 + p {
+  font-weight: bold;
+  /* Afecta SOLO al <p> inmediatamente después de <h3> */
+}
+
+/* 19. Selectores compuestos */
+p.nota {
+  background-color: #e3f2fd;
+  padding: 10px;
+  border-left: 4px solid #2196f3;
+  /* Afecta solo a los <p> que tienen la clase "nota" */
+}
+
+/* 20. Múltiples selectores */
+h1,
+h2,
+.titulo {
+  font-family: "Georgia", serif;
+  /* Afecta a todos los <h1>, <h2> y elementos con clase "titulo" */
+}
