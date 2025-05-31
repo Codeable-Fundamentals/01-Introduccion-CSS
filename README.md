@@ -1,5 +1,6 @@
 # Introducción a CSS 🎨
-
+Hola mundo del CSS! 👋
+hola-mundo-css
 Este repositorio contiene ejemplos prácticos y ejercicios para aprender CSS desde cero. Está diseñado para principiantes que quieren dominar los conceptos fundamentales de CSS.
 
 ## 📚 Contenido
