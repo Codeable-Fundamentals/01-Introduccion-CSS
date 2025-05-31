@@ -7,7 +7,7 @@
   <style>
     /* Estilos de Agente de Usuario */
         body {
-        color: black; /* pierde vs estilos de Usuario */
+        color: black !important; /* pierde vs estilos de Usuario */
         }
         
         /* Estilos de Usuario */
@@ -18,8 +18,8 @@
         /* Estilos de Autor */
         body {
         color: red; /* purple aparece después y le gana */
-        color: purple !important; /* gana por ser importante */
-        color: yellow; /* aparece al final y ganaría, pero pierde por importancia */
+        color: purple; /* gana por ser importante */
+        color: peru; /* aparece al final y ganaría, pero pierde por importancia */
         }
   </style>
   <body>

@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <style>
-    div p {
-      color: orange;
-    }
-  </style>
-</head>
-<body>
-  <h2>Selector descendente</h2>
-  <div>
-    <p>Este párrafo dentro del div es naranja.</p>
-  </div>
-  <p>Este párrafo no es afectado porque no está dentro de un div.</p>
-</body>
+  <head>
+    <style>
+      div p {
+        color: orange;
+      }
+
+      * {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Selector descendente</h2>
+    <div>
+      <p>Este párrafo dentro del div es naranja.</p>
+    </div>
+    <p>Este párrafo no es afectado porque no está dentro de un div.</p>
+  </body>
 </html>

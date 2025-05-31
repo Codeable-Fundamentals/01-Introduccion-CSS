@@ -1,9 +1,16 @@
 
-p {
-    color: brown;
+h3 {
+    border: 1px dashed purple;
+    color: purple;
 }
 
-div {
- border: 1px solid red;
- height: 20px;   
+
+h1 {
+    font-style: italic;
+    color: red;
+}
+
+
+p {
+    color: green
 }
